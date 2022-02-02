@@ -1,0 +1,8 @@
+version: '3.1'
+service:
+  webserver:
+    image: nginx
+    container_name: dockerUi
+    restrat: unless-stopped
+    port:
+     - "93:80"
