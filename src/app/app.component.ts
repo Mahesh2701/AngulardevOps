@@ -11,12 +11,13 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient){}
   ngOnInit(): void {
    alert('On Init');
-    this.http.get('https://localhost:5001/weatherforecast').subscribe(
+   alert("container");
+    this.http.get('http://3.110.223.63:5001/weatherforecast').subscribe(
       (result) =>{
         result ?alert('hello'): alert('false');
       });
 
-      this.http.get('https://localhost:5004/weatherforecast').subscribe(
+      this.http.get('https://3.110.223.63:5004/weatherforecast').subscribe(
       (result) =>{
         result ?alert('hello222'): alert('false2222');
       });
